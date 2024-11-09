@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Community Helpers - Home</title>
+  <style>
+    /* General Styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+    body {
+      line-height: 1.6;
+    }
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: auto;
+    }
+    /* Header */
+    header {
+      background-color: #0066cc;
+      color: #ffffff;
+      padding: 20px 0;
+    }
+    header h1 {
+      display: inline-block;
+      margin-left: 20px;
+    }
+    header nav ul {
+      list-style: none;
+      display: inline-block;
+      float: right;
+    }
+    header nav ul li {
+      display: inline;
+      margin: 0 10px;
+    }
+    header nav ul li a {
+      color: #ffffff;
+      text-decoration: none;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    /* Banner */
+    .banner {
+      background: #0066cc;
+      color: #fff;
+      text-align: center;
+      padding: 60px 20px;
+    }
+    .banner h2 {
+      font-size: 2rem;
+    }
+    .cta-button {
+      display: inline-block;
+      background-color: #ff6600;
+      color: #ffffff;
+      padding: 10px 20px;
+      margin-top: 20px;
+      border-radius: 5px;
+      text-decoration: none;
+      cursor: pointer;
+    }
+    /* Directory Section */
+    .directory {
+      background-color: #f0f2f5;
+      padding: 40px 0;
+      text-align: center;
+    }
+    .helper-cards {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      margin-top: 20px;
+    }
+    .helper-card {
+      background-color: #ffffff;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      padding: 20px;
+      width: 200px;
+      text-align: center;
+    }
+    .helper-card h3 {
+      color: #333;
+    }
+    .helper-card button {
+      background-color: #0066cc;
+      color: #fff;
+      padding: 8px 12px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    /* About Section */
+    .about, .resources {
+      padding: 40px 0;
+      text-align: center;
+    }
+    .resources ul {
+      list-style: none;
+    }
+    .resources ul li a {
+      color: #0066cc;
+      text-decoration: none;
+    }
+    .resources ul li a:hover {
+      text-decoration: underline;
+    }
+    /* Footer */
+    footer {
+      background-color: #333;
+      color: #ffffff;
+      text-align: center;
+      padding: 20px 0;
+    }
+    footer nav ul {
+      list-style: none;
+      padding-top: 10px;
+    }
+    footer nav ul li {
+      display: inline;
+      margin: 0 10px;
+    }
+    footer nav ul li a {
+      color: #ffffff;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="container">
+      <h1>Community Helpers</h1>
+      <nav>
+        <ul>
+          <li><a onclick="scrollToSection('directory')">Helpers Directory</a></li>
+          <li><a onclick="scrollToSection('about')">About</a></li>
+          <li><a onclick="scrollToSection('resources')">Resources</a></li>
+          <li><a href="login.html">Login</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Banner -->
+  <section class="banner">
+    <h2>Find the help you need, from trusted community members</h2>
+    <p>Your connection to reliable, local professionals for everyday needs</p>
+    <span class="cta-button" onclick="scrollToSection('directory')">Find Help Now</span>
+  </section>
+
+  <!-- Helpers Directory -->
+  <section class="directory" id="directory">
+    <div class="container">
+      <h2>Helpers Directory</h2>
+      <p>Browse community helpers in your area.</p>
+      <div class="helper-cards">
+        <div class="helper-card">
+          <h3>John Doe</h3>
+          <p>Electrician</p>
+          <p>Experience: 5 years</p>
+          <button onclick="contactHelper('John Doe', 'Electrician')">Contact</button>
+        </div>
+        <div class="helper-card">
+          <h3>Mary Smith</h3>
+          <p>Teacher</p>
+          <p>Experience: 10 years</p>
+          <button onclick="contactHelper1('Mary Smith', 'Teacher')">Contact</button>
+        </div>
+        <div class="helper-card">
+          <h3>Michael Brown</h3>
+          <p>Plumber</p>
+          <p>Experience: 8 years</p>
+          <button onclick="contactHelper2('Michael Brown', 'Plumber')">Contact</button>
+        </div>
+        <div class="helper-card">
+            <h3>Hospital</h3>
+            
+            <p>Doctor</p>
+            <br>
+            <button onclick="contactHelper3('Hospital', 'Doctor')">Contact</button>
+          </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="about" id="about">
+    <div class="container">
+      <h2>About Us</h2>
+      <p>Our mission is to connect community members with trusted local professionals. We aim to make it easy to find reliable help for all your needs.</p>
+    </div>
+  </section>
+
+  <!-- Resources Section -->
+  <section class="resources" id="resources">
+    <div class="container">
+      <h2>Helpful Resources</h2>
+      <ul>
+        <li><a href="#">How to find reliable helpers</a></li>
+        <li><a href="#">Safety tips for hiring locally</a></li>
+        <li><a href="#">Common services and rates</a></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2024 Community Helpers. All rights reserved.</p>
+      <nav>
+        <ul>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms of Service</a></li>
+          <li><a href="#">Contact Us</a></li>
+        </ul>
+      </nav>
+    </div>
+  </footer>
+
+  <!-- JavaScript for Interactivity -->
+  <script>
+    // Smooth scroll to a specific section
+    function scrollToSection(sectionId) {
+      document.getElementById(sectionId).scrollIntoView({ behavior: 'smooth' });
+    }
+
+    // Show contact information alert for a helper
+    function contactHelper(name, profession) {
+        window.location.href = "john.html"; 
+      // Here you could redirect to a profile page, if available
+    }
+    function contactHelper1(name, profession) {
+        window.location.href = "mary.html"; 
+      // Here you could redirect to a profile page, if available
+    }
+    function contactHelper2(name, profession) {
+        window.location.href = "micheal.html"; 
+      // Here you could redirect to a profile page, if available
+    }
+    function contactHelper3(name, profession) {
+        window.location.href = "hospital.html"; 
+      // Here you could redirect to a profile page, if available
+    }
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Community Helpers Login</title>
+  <style>
+    /* CSS for the login page */
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      background-color: #f0f2f5;
+    }
+
+    .login-container {
+      background-color: #ffffff;
+      padding: 40px 30px;
+      width: 100%;
+      max-width: 400px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      text-align: center;
+    }
+
+    h2 {
+      color: #333;
+      margin-bottom: 20px;
+    }
+
+    .login-form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .input-group {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    label {
+      margin-bottom: 5px;
+      color: #555;
+      font-size: 14px;
+    }
+
+    input[type="email"],
+    input[type="password"] {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 16px;
+      color: #333;
+    }
+
+    input[type="email"]:focus,
+    input[type="password"]:focus {
+      outline: none;
+      border-color: #0066cc;
+    }
+
+    .checkbox-group {
+      display: flex;
+      align-items: center;
+    }
+
+    .checkbox-group input {
+      margin-right: 8px;
+    }
+
+    .login-button {
+      background-color: #0066cc;
+      color: #fff;
+      padding: 12px;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .login-button:hover {
+      background-color: #004a99;
+    }
+
+    .forgot-password {
+      color: #0066cc;
+      font-size: 14px;
+      text-decoration: none;
+      margin-top: 10px;
+    }
+
+    .forgot-password:hover {
+      text-decoration: underline;
+    }
+
+    #error-message {
+      color: red;
+      display: none;
+      font-size: 14px;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="login-container">
+    <h2>Login to Community Helpers</h2>
+    <form class="login-form" id="loginForm">
+      <div class="input-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+      <div class="input-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" required>
+      </div>
+      <div class="checkbox-group">
+        <input type="checkbox" id="remember" name="remember">
+        <label for="remember">Remember Me</label>
+      </div>
+      <button type="submit" class="login-button">Login</button>
+      <a href="#" class="forgot-password">Forgot Password?</a>
+      <p id="error-message">Invalid email or password</p>
+    </form>
+  </div>
+
+  <script>
+    // JavaScript for login form validation
+    document.getElementById("loginForm").addEventListener("submit", function(event) {
+      event.preventDefault(); 
+      // Prevent form submission
+      
+      // Get email and password input values
+      const email = document.getElementById("email").value;
+      const password = document.getElementById("password").value;
+      
+      // Predefined valid credentials (for testing purposes)
+      const validEmail = "user@example.com";
+      const validPassword = "password123";
+      
+      // Check if credentials match
+      if (email === validEmail && password === validPassword) {
+        // Redirect to the homepage
+        window.location.href = "home.html"; // Replace with actual homepage URL
+      } else {
+        // Show error message
+        document.getElementById("error-message").style.display = "block";
+      }
+    });
+  </script>
+</body>
+</html>
+

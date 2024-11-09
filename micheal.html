@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Michael Brown - Plumber Profile</title>
+  <style>
+    /* Basic styles for profile page */
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #f4f6f9;
+      color: #333;
+      height: 100vh;
+      padding: 20px;
+    }
+
+    .profile-container {
+      background-color: #fff;
+      max-width: 600px;
+      width: 100%;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+
+    .profile-container img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      font-size: 24px;
+      color: #0066cc;
+      margin-bottom: 5px;
+    }
+
+    h2 {
+      font-size: 18px;
+      color: #666;
+      margin-bottom: 20px;
+    }
+
+    .experience,
+    .availability {
+      font-size: 16px;
+      margin-bottom: 15px;
+      color: #333;
+    }
+
+    .description {
+      color: #555;
+      font-size: 14px;
+      margin-bottom: 20px;
+    }
+
+    .contact-button {
+      display: inline-block;
+      background-color: #ff6600;
+      color: #fff;
+      padding: 10px 20px;
+      border-radius: 5px;
+      text-decoration: none;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .contact-button:hover {
+      background-color: #cc5200;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="profile-container">
+    <img src="https://via.placeholder.com/120" alt="Michael Brown's Photo">
+    <h1>Michael Brown</h1>
+    <h2>Plumber</h2>
+    <p class="experience"><strong>Experience:</strong> 8 years</p>
+    <p class="availability"><strong>Availability:</strong> Available for new tasks</p>
+    <p class="description">
+      Michael Brown is a professional plumber with 8 years of experience in both residential and commercial plumbing. He specializes in pipe installations, repairs, and maintenance, ensuring water systems are safe and efficient.
+    </p>
+    <a href="#" class="contact-button" onclick="showAvailability()">Contact Michael</a>
+  </div>
+
+  <script>
+    // JavaScript function to show alert for availability
+    function showAvailability() {
+      alert("Michael is available for new plumbing tasks!");
+      window.location.href="home.html";
+    }
+  </script>
+  
+</body>
+</html>
